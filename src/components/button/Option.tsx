@@ -1,15 +1,16 @@
 import { StyledOptionSelector } from "../styles/button/Button.styled";
-import { StyledParagraph } from "../styles/text/Text.styled";
+import { StyledParagraphCentered } from "../styles/text/Text.styled";
 
 interface Props {
   text: string;
   selected?: boolean;
 }
 
+/* TODO: Si se ocupa? */
 export const Option = ({ text, selected }: Props) => {
   return (
     <StyledOptionSelector selected={selected}>
-      <StyledParagraph>{text}</StyledParagraph>
+      <StyledParagraphCentered>{text}</StyledParagraphCentered>
     </StyledOptionSelector>
   );
 };

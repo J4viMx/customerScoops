@@ -1,10 +1,15 @@
 import { Link } from "react-router-dom";
 import { StyledNextButton } from "../styles/button/Button.styled";
 
-export const ButtonNextStep = () => {
+interface Props {
+  text: string;
+  nextPage: string;
+}
+
+export const ButtonNextStep = ({ text, nextPage }: Props) => {
   return (
-    <Link to={`/`}>
-      <StyledNextButton>Comenzar</StyledNextButton>
+    <Link to={`${nextPage}`}>
+      <StyledNextButton>{text}</StyledNextButton>
     </Link>
   );
 };

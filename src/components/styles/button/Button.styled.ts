@@ -32,7 +32,7 @@ export const StyledOptionSelector = styled.div<SelectorProps>`
   height: 39px;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
+  justify-content: center;
   text-align: center;
   color: ${(props) => (props.selected ? "white" : props.theme.colors.primary)};
   font-size: ${(props) => props.theme.text.small};
@@ -46,7 +46,7 @@ export const StyledOptionSelector = styled.div<SelectorProps>`
 
 export const StyledOptionLetter = styled.div`
   width: 15%;
-  height: 90%;
+  height: 85%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,4 +55,5 @@ export const StyledOptionLetter = styled.div`
   border-radius: ${(props) => props.theme.borderRadius};
   font-weight: 900;
   margin-left: 5px;
+  text-transform: uppercase;
 `;

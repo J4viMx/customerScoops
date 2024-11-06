@@ -14,13 +14,13 @@ import {
   StyledSecondNumber,
 } from "../styles/text/Text.styled";
 
-export const Banner = () => {
+export const Banner = ({ pageNumber }: { pageNumber: string }) => {
   return (
-    <ContainerBanner>
+    <ContainerBanner style={{ paddingLeft: "20px" }}>
       <StyledImageBanner src={imgBanner} alt="Banner mobile" />
       <StyledImageLogo src={logoBanner} alt="Logo Customer Scoops" />
       <ContainerPagination>
-        <StyledFirstNumber>01</StyledFirstNumber>
+        <StyledFirstNumber>{pageNumber}</StyledFirstNumber>
         <Separator />
         <StyledSecondNumber>06</StyledSecondNumber>
       </ContainerPagination>
