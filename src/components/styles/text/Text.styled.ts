@@ -3,6 +3,9 @@ import styled from "styled-components";
 interface QuestionProps {
   spacing?: boolean;
 }
+interface ParagraphProps {
+  isLastStep?: boolean;
+}
 
 export const StyledFirstNumber = styled.p`
   font-size: 18px;
@@ -18,6 +21,7 @@ export const StyledSecondNumber = styled(StyledFirstNumber)`
 
 export const StyledParagraphCentered = styled.p`
   text-align: center;
+  font-size: 11px;
   flex: 1;
 `;
 
@@ -44,12 +48,17 @@ export const StyledTextItalic = styled.p`
   font-weight: 500;
 `;
 
-export const StyledParagraph = styled.p`
-  font-weight: 500;
+export const StyledParagraph = styled.p<ParagraphProps>`
+  font-weight: 400;
   font-size: ${(props) => props.theme.text.medium};
   line-height: 24px;
   color: ${(props) => props.theme.colors.primary};
   text-align: left;
+
+  @media (min-width: 768px) {
+    font-size: ${(props) => (props.isLastStep ? "30px" : "19px")};
+    line-height: ${(props) => (props.isLastStep ? "39px" : "19px")};
+  }
 `;
 
 export const StyledParagraphQuestion = styled(StyledParagraph)<QuestionProps>`

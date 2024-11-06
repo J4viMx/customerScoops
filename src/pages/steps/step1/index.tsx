@@ -1,6 +1,13 @@
-import { Banner } from "../../../components/bannerMobile/Banner";
+import { Banner } from "../../../components/banner/Banner";
+import { LogoDesktop } from "../../../components/logoDesktop/LogoDesktop";
 import { NavigationButtons } from "../../../components/NavigationButtons/NavigationButtons";
-import { ContainerText } from "../../../components/styles/container/Container.styled";
+import {
+  ContainerMain,
+  ContainerText,
+  FirstItem,
+  ProgressBar,
+  SecondItem,
+} from "../../../components/styles/container/Container.styled";
 import { StyledInput } from "../../../components/styles/input/Input.styled";
 import {
   StyledParagraph,
@@ -10,26 +17,32 @@ import {
 
 const Step1 = () => {
   return (
-    <div>
-      <Banner pageNumber={"01"} />
-      <ContainerText>
-        <StyledParagraph>
-          Muchas gracias por tu interés en conocer{" "}
-          <StyledSpan>customerScoops,</StyledSpan> que a través de Formularios
-          Conversacionales Inteligente te ayudamos a aumentar el revenue y
-          rentabilidad de tu negocio.
-        </StyledParagraph>
-        <StyledParagraphQuestion spacing>
-          Queremos conocerte, ¿cuál es tu nombre?
-        </StyledParagraphQuestion>
-        <StyledInput placeholder="Nombre" />
-        <NavigationButtons
-          text={"Comenzar"}
-          isFirstORLastPage
-          nextPage={"/step-2"}
-        />
-      </ContainerText>
-    </div>
+    <ContainerMain>
+      <ProgressBar progress="16%" />
+      <FirstItem>
+        <Banner pageNumber={"01"} />
+      </FirstItem>
+      <SecondItem>
+        <ContainerText>
+          <LogoDesktop />
+          <StyledParagraph>
+            Muchas gracias por tu interés en conocer{" "}
+            <StyledSpan>customerScoops,</StyledSpan> que a través de Formularios
+            Conversacionales Inteligente te ayudamos a aumentar el revenue y
+            rentabilidad de tu negocio.
+          </StyledParagraph>
+          <StyledParagraphQuestion spacing>
+            Queremos conocerte, ¿cuál es tu nombre?
+          </StyledParagraphQuestion>
+          <StyledInput placeholder="Nombre" />
+          <NavigationButtons
+            text={"Comenzar"}
+            isFirstORLastPage
+            nextPage={"/step-2"}
+          />
+        </ContainerText>
+      </SecondItem>
+    </ContainerMain>
   );
 };
 

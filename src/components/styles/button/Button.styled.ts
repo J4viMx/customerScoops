@@ -14,6 +14,14 @@ export const StyledNextButton = styled.button`
   border-radius: ${(props) => props.theme.borderRadius};
   line-height: 13px;
   cursor: pointer;
+
+  @media (min-width: 768px) {
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
 `;
 
 export const StyledPreviousButton = styled.div`
@@ -45,7 +53,7 @@ export const StyledOptionSelector = styled.div<SelectorProps>`
 `;
 
 export const StyledOptionLetter = styled.div`
-  width: 15%;
+  width: 50px;
   height: 85%;
   display: flex;
   justify-content: center;
@@ -56,4 +64,9 @@ export const StyledOptionLetter = styled.div`
   font-weight: 900;
   margin-left: 5px;
   text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    width: 30px;
+    height: 30px;
+  }
 `;

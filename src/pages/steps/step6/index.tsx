@@ -1,6 +1,13 @@
-import { Banner } from "../../../components/bannerMobile/Banner";
+import { Banner } from "../../../components/banner/Banner";
+import { LogoDesktop } from "../../../components/logoDesktop/LogoDesktop";
 import { NavigationButtons } from "../../../components/NavigationButtons/NavigationButtons";
-import { ContainerText } from "../../../components/styles/container/Container.styled";
+import {
+  ContainerMain,
+  ContainerText,
+  FirstItem,
+  ProgressBar,
+  SecondItem,
+} from "../../../components/styles/container/Container.styled";
 import {
   StyledParagraph,
   StyledTextItalic,
@@ -9,22 +16,28 @@ import {
 
 const Step6 = () => {
   return (
-    <div>
-      <Banner pageNumber={"06"} />
-      <ContainerText>
-        <StyledTextTitle>Muchas Gracias</StyledTextTitle>
-        <StyledParagraph>
-          por querer ser parte de la familia Scoopers.
-        </StyledParagraph>
+    <ContainerMain isLastStep>
+      <ProgressBar progress="100%" />
+      <FirstItem>
+        <Banner pageNumber={"06"} />
+      </FirstItem>
+      <SecondItem>
+        <ContainerText>
+          <LogoDesktop />
+          <StyledTextTitle>Muchas Gracias</StyledTextTitle>
+          <StyledParagraph isLastStep>
+            por querer ser parte de la familia Scoopers.
+          </StyledParagraph>
 
-        <StyledTextItalic>Nos vemos pronto!</StyledTextItalic>
-        <NavigationButtons
-          text={"Finalizar"}
-          isFirstORLastPage
-          nextPage="https://www.customerscoops.com/"
-        />
-      </ContainerText>
-    </div>
+          <StyledTextItalic>Nos vemos pronto!</StyledTextItalic>
+          <NavigationButtons
+            text={"Finalizar"}
+            isFirstORLastPage
+            nextPage="https://www.customerscoops.com/"
+          />
+        </ContainerText>
+      </SecondItem>
+    </ContainerMain>
   );
 };
 

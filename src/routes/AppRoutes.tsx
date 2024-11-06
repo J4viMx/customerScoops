@@ -1,12 +1,14 @@
-import React from "react";
+import React, { lazy } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Step1 from "../pages/steps/step1";
-import Step2 from "../pages/steps/step2";
-import Step3 from "../pages/steps/step3";
-import Step4 from "../pages/steps/step4";
-import Step5 from "../pages/steps/step5";
-import Step6 from "../pages/steps/step6";
+import Loadable from "../components/Loader/Loadable";
+
+const Step1 = Loadable(lazy(() => import("../pages/steps/step1")));
+const Step2 = Loadable(lazy(() => import("../pages/steps/step2")));
+const Step3 = Loadable(lazy(() => import("../pages/steps/step3")));
+const Step4 = Loadable(lazy(() => import("../pages/steps/step4")));
+const Step5 = Loadable(lazy(() => import("../pages/steps/step5")));
+const Step6 = Loadable(lazy(() => import("../pages/steps/step6")));
 
 const AppRoutes: React.FC = () => {
   return (

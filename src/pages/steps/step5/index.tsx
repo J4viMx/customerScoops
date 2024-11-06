@@ -1,7 +1,14 @@
-import { Banner } from "../../../components/bannerMobile/Banner";
+import { Banner } from "../../../components/banner/Banner";
+import { LogoDesktop } from "../../../components/logoDesktop/LogoDesktop";
 import { NavigationButtons } from "../../../components/NavigationButtons/NavigationButtons";
 import { OptionsComponent } from "../../../components/options/OptionsComponent";
-import { ContainerText } from "../../../components/styles/container/Container.styled";
+import {
+  ContainerMain,
+  ContainerText,
+  FirstItem,
+  ProgressBar,
+  SecondItem,
+} from "../../../components/styles/container/Container.styled";
 import {
   StyledParagraphQuestion,
   StyledTextSubtitle,
@@ -23,22 +30,30 @@ enum options {
 
 const Step5 = () => {
   return (
-    <div>
-      <Banner pageNumber={"05"} />
-      <ContainerText>
-        <StyledTextSubtitle>Ahora te vamos a sorprender...</StyledTextSubtitle>
-        <StyledParagraphQuestion>
-          ¿A cuál industria pertenece tu empresa?
-        </StyledParagraphQuestion>
-        <OptionsComponent options={Object.values(options)} columns="2" />
-        <NavigationButtons
-          text={"Siguiente"}
-          isFirstORLastPage={false}
-          nextPage="/step-6"
-          previousPage="/step-5"
-        />
-      </ContainerText>
-    </div>
+    <ContainerMain>
+      <ProgressBar progress="80%" />
+      <FirstItem>
+        <Banner pageNumber={"05"} />
+      </FirstItem>
+      <SecondItem>
+        <ContainerText>
+          <LogoDesktop />
+          <StyledTextSubtitle>
+            Ahora te vamos a sorprender...
+          </StyledTextSubtitle>
+          <StyledParagraphQuestion>
+            ¿A cuál industria pertenece tu empresa?
+          </StyledParagraphQuestion>
+          <OptionsComponent options={Object.values(options)} columns="2" />
+          <NavigationButtons
+            text={"Siguiente"}
+            isFirstORLastPage={false}
+            nextPage="/step-6"
+            previousPage="/step-5"
+          />
+        </ContainerText>
+      </SecondItem>
+    </ContainerMain>
   );
 };
 

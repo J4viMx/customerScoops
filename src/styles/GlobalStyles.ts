@@ -3,7 +3,9 @@ import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
     :root {
-        font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+        @import url('https://fonts.googleapis.com/css2?family=K2D:wght@300;400;500;600;700&display=swap');
+        font-family: 'K2D', sans-serif;
         line-height: 1.5;
         font-weight: 400;
         color: #000;
@@ -12,9 +14,6 @@ const GlobalStyles = createGlobalStyle`
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-
-        max-width: 1280px;
-        text-align: center;
     }   
     * {
         margin: 0;

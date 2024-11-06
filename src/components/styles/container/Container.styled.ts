@@ -4,6 +4,14 @@ interface ContainerProps {
   columns?: string;
 }
 
+interface ContainerMainProps {
+  isLastStep?: boolean;
+}
+
+interface ProgressBarProps {
+  progress?: string;
+}
+
 export const ContainerBanner = styled.div`
   width: 100%;
   position: relative;
@@ -31,6 +39,16 @@ export const ContainerText = styled.div`
   margin: 0 auto;
   margin-top: 50px;
   margin-bottom: 10px;
+
+  @media (min-width: 768px) {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
 `;
 
 export const ContainerButtonPagination = styled.div`
@@ -47,12 +65,67 @@ export const Container = styled.div<ContainerProps>`
     ${(props) => (props.columns ? props.columns : 2)},
     1fr
   );
-  gap: 10px;
+  gap: 5px;
   margin: 0 auto;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(
+      ${(props) => (props.columns ? parseInt(props.columns, 10) + 1 : 3)},
+      1fr
+    );
+  }
 `;
 
 export const Item = styled.div`
-  &:nth-child(odd):last-child {
-    grid-column: 1 / -1;
+  @media (max-width: 1023px) {
+    &:nth-child(odd):last-child {
+      grid-column: 1 / -1;
+    }
+  }
+`;
+
+export const ContainerMain = styled.div<ContainerMainProps>`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    background-color: ${(props) =>
+      props.isLastStep ? props.theme.colors.blue : ""};
+  }
+`;
+
+export const FirstItem = styled.div`
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 50%;
+    order: 2;
+  }
+`;
+
+export const SecondItem = styled.div`
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 50%;
+    order: 1;
+  }
+`;
+
+export const ProgressBar = styled.div<ProgressBarProps>`
+  height: 4px;
+  width: ${(props) => props.progress};
+  background-color: ${(props) => props.theme.colors.primary};
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 20;
+
+  @media (min-width: 768px) {
+    height: 8px;
   }
 `;

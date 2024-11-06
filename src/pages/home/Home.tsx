@@ -1,4 +1,4 @@
-import { Banner } from "../../components/bannerMobile/Banner";
+import { Banner } from "../../components/banner/Banner";
 import { ButtonNextStep } from "../../components/button/ButtonNextStep";
 import { ButtonPreviousStep } from "../../components/button/ButtonPreviousStep";
 import { ButtonWithLetter } from "../../components/button/ButtonWithLetter";

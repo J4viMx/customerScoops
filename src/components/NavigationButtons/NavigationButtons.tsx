@@ -18,7 +18,11 @@ export const NavigationButtons = ({
   return (
     <ContainerButtonPagination>
       {!isFirstORLastPage && <ButtonPreviousStep link={previousPage || ""} />}
-      <ButtonNextStep text={text} nextPage={nextPage} />
+      <ButtonNextStep
+        text={text}
+        nextPage={nextPage}
+        isFirstORLastPage={isFirstORLastPage}
+      />
     </ContainerButtonPagination>
   );
 };
