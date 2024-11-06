@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 interface QuestionProps {
-  spacing?: boolean;
+  $spacing?: boolean;
 }
 interface ParagraphProps {
-  isLastStep?: boolean;
+  $isLastStep?: boolean;
 }
 
 export const StyledFirstNumber = styled.p`
@@ -56,13 +56,13 @@ export const StyledParagraph = styled.p<ParagraphProps>`
   text-align: left;
 
   @media (min-width: 768px) {
-    font-size: ${(props) => (props.isLastStep ? "30px" : "19px")};
-    line-height: ${(props) => (props.isLastStep ? "39px" : "19px")};
+    font-size: ${(props) => (props.$isLastStep ? "30px" : "19px")};
+    line-height: ${(props) => (props.$isLastStep ? "39px" : "19px")};
   }
 `;
 
 export const StyledParagraphQuestion = styled(StyledParagraph)<QuestionProps>`
-  margin-top: ${(props) => (props.spacing ? "50px" : "0px")};
+  margin-top: ${(props) => (props.$spacing ? "50px" : "0px")};
   margin-bottom: 50px;
 `;
 

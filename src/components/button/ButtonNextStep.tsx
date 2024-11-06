@@ -21,7 +21,7 @@ export const ButtonNextStep = ({
         <ArrowImg
           src={arrow}
           alt="arrow"
-          isFirstORLastPage={isFirstORLastPage}
+          $isFirstORLastPage={isFirstORLastPage}
         />
       </StyledNextButton>
     </Link>

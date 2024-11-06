@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { Banner } from "../../../components/banner/Banner";
 import { LogoDesktop } from "../../../components/logoDesktop/LogoDesktop";
 import { NavigationButtons } from "../../../components/NavigationButtons/NavigationButtons";
@@ -10,6 +11,7 @@ import {
   SecondItem,
 } from "../../../components/styles/container/Container.styled";
 import { StyledParagraphQuestion } from "../../../components/styles/text/Text.styled";
+import { useSurvey } from "../../../hooks/useSurvey";
 
 enum options {
   "SAP" = "SAP",
@@ -24,19 +26,33 @@ enum options {
 }
 
 const Step4 = () => {
+  const { state, dispatch } = useSurvey();
+  const step = useRef("04");
+
+  const handleClick = (value: string) => {
+    dispatch({
+      type: "SET_RESPONSE",
+      payload: { step: step.current, response: value },
+    });
+  };
   return (
     <ContainerMain>
-      <ProgressBar progress="64%" />
+      <ProgressBar $progress="64%" />
       <FirstItem>
         <Banner pageNumber={"04"} />
       </FirstItem>
       <SecondItem>
         <ContainerText>
           <LogoDesktop />
-          <StyledParagraphQuestion spacing>
+          <StyledParagraphQuestion $spacing>
             ¿Cuál CRM están utilizando en tu empresa? <br /> CRM:
           </StyledParagraphQuestion>
-          <OptionsComponent options={Object.values(options)} columns="2" />
+          <OptionsComponent
+            selected={state[step.current]}
+            options={Object.values(options)}
+            columns="2"
+            handleClick={handleClick}
+          />
           <NavigationButtons
             text={"Siguiente"}
             isFirstORLastPage={false}

@@ -16,8 +16,8 @@ import {
 
 const Step6 = () => {
   return (
-    <ContainerMain isLastStep>
-      <ProgressBar progress="100%" />
+    <ContainerMain $isLastStep>
+      <ProgressBar $progress="100%" />
       <FirstItem>
         <Banner pageNumber={"06"} />
       </FirstItem>
@@ -25,7 +25,7 @@ const Step6 = () => {
         <ContainerText>
           <LogoDesktop />
           <StyledTextTitle>Muchas Gracias</StyledTextTitle>
-          <StyledParagraph isLastStep>
+          <StyledParagraph $isLastStep>
             por querer ser parte de la familia Scoopers.
           </StyledParagraph>
 

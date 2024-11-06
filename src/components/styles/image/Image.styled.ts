@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 interface ImageProps {
-  isFirstORLastPage?: boolean;
+  $isFirstORLastPage?: boolean;
 }
 
 export const StyledImageBanner = styled.img`
@@ -49,6 +49,6 @@ export const StyledImageLogoDesktop = styled.img`
 export const ArrowImg = styled.img<ImageProps>`
   display: none;
   @media (min-width: 768px) {
-    display: ${(props) => (props.isFirstORLastPage ? "none" : "block")};
+    display: ${(props) => (props.$isFirstORLastPage ? "none" : "block")};
   }
 `;

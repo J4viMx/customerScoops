@@ -1,15 +1,15 @@
 import styled from "styled-components";
 
 interface ContainerProps {
-  columns?: string;
+  $columns?: string;
 }
 
 interface ContainerMainProps {
-  isLastStep?: boolean;
+  $isLastStep?: boolean;
 }
 
 interface ProgressBarProps {
-  progress?: string;
+  $progress: string;
 }
 
 export const ContainerBanner = styled.div`
@@ -62,7 +62,7 @@ export const ContainerButtonPagination = styled.div`
 export const Container = styled.div<ContainerProps>`
   display: grid;
   grid-template-columns: repeat(
-    ${(props) => (props.columns ? props.columns : 2)},
+    ${(props) => (props.$columns ? props.$columns : 2)},
     1fr
   );
   gap: 5px;
@@ -71,7 +71,7 @@ export const Container = styled.div<ContainerProps>`
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(
-      ${(props) => (props.columns ? parseInt(props.columns, 10) + 1 : 3)},
+      ${(props) => (props.$columns ? parseInt(props.$columns, 10) + 1 : 3)},
       1fr
     );
   }
@@ -94,7 +94,7 @@ export const ContainerMain = styled.div<ContainerMainProps>`
   @media (min-width: 768px) {
     flex-direction: row;
     background-color: ${(props) =>
-      props.isLastStep ? props.theme.colors.blue : ""};
+      props.$isLastStep ? props.theme.colors.blue : ""};
   }
 `;
 
@@ -118,7 +118,7 @@ export const SecondItem = styled.div`
 
 export const ProgressBar = styled.div<ProgressBarProps>`
   height: 4px;
-  width: ${(props) => props.progress};
+  width: ${(props) => props.$progress};
   background-color: ${(props) => props.theme.colors.primary};
   position: fixed;
   left: 0;

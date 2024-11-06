@@ -1,5 +1,10 @@
 import React, { lazy } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 
 import Loadable from "../components/Loader/Loadable";
 
@@ -20,6 +25,7 @@ const AppRoutes: React.FC = () => {
         <Route path="/step-4" element={<Step4 />} />
         <Route path="/step-5" element={<Step5 />} />
         <Route path="/step-6" element={<Step6 />} />
+        <Route path="/*" element={<Navigate to={"/"} />} />
       </Routes>
     </Router>
   );

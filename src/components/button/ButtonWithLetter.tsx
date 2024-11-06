@@ -8,11 +8,17 @@ interface Props {
   text: string;
   letter: string;
   selected?: boolean;
+  handleClick: () => void;
 }
 
-export const ButtonWithLetter = ({ text, selected, letter }: Props) => {
+export const ButtonWithLetter = ({
+  text,
+  selected,
+  letter,
+  handleClick,
+}: Props) => {
   return (
-    <StyledOptionSelector selected={selected}>
+    <StyledOptionSelector onClick={handleClick} selected={selected}>
       <StyledOptionLetter>{letter}</StyledOptionLetter>
       <StyledParagraphCentered>{text}</StyledParagraphCentered>
     </StyledOptionSelector>
