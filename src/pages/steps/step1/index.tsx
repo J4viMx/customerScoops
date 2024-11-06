@@ -19,7 +19,7 @@ import { useSurvey } from "../../../hooks/useSurvey";
 
 const Step1 = () => {
   const { state, dispatch } = useSurvey();
-  const step = useRef("01");
+  const step = useRef("step-1");
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     dispatch({

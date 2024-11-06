@@ -32,7 +32,7 @@ enum options {
 
 const Step5 = () => {
   const { state, dispatch } = useSurvey();
-  const step = useRef("02");
+  const step = useRef("step-5");
 
   const handleClick = (value: string) => {
     dispatch({
@@ -65,7 +65,7 @@ const Step5 = () => {
             text={"Siguiente"}
             isFirstORLastPage={false}
             nextPage="/step-6"
-            previousPage="/step-5"
+            previousPage="/step-4"
           />
         </ContainerText>
       </SecondItem>

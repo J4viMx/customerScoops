@@ -30,7 +30,7 @@ enum options {
 
 const Step2 = () => {
   const { state, dispatch } = useSurvey();
-  const step = useRef("02");
+  const step = useRef("step-2");
 
   const handleClick = (value: string) => {
     dispatch({
