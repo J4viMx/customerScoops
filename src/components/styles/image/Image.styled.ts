@@ -9,7 +9,7 @@ export const StyledImageBanner = styled.img`
   object-fit: cover;
   object-position: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     display: none;
   }
 `;
@@ -20,7 +20,7 @@ export const StyledImageLogo = styled.img`
   left: 25%;
   transform: translate(-50%, -50%);
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     display: none;
   }
 `;
@@ -31,7 +31,7 @@ export const StyledImageBannerDesktop = styled.img`
   /* object-position: center; */
   display: none;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     display: block;
   }
 `;
@@ -41,14 +41,14 @@ export const StyledImageLogoDesktop = styled.img`
   width: 113px;
   height: 41px;
   margin-bottom: 30px;
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     display: block;
   }
 `;
 
 export const ArrowImg = styled.img<ImageProps>`
   display: none;
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     display: ${(props) => (props.$isFirstORLastPage ? "none" : "block")};
   }
 `;

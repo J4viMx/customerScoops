@@ -40,7 +40,7 @@ export const ContainerText = styled.div`
   margin-top: 50px;
   margin-bottom: 10px;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     width: 55%;
     height: 100%;
     display: flex;
@@ -69,7 +69,7 @@ export const Container = styled.div<ContainerProps>`
   margin: 0 auto;
   width: 100%;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     grid-template-columns: repeat(
       ${(props) => (props.$columns ? parseInt(props.$columns, 10) + 1 : 3)},
       1fr
@@ -85,13 +85,13 @@ export const Item = styled.div`
   }
 `;
 
-export const ContainerMain = styled.div<ContainerMainProps>`
+export const ContainerMain = styled.main<ContainerMainProps>`
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 100%;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     flex-direction: row;
     background-color: ${(props) =>
       props.$isLastStep ? props.theme.colors.blue : ""};
@@ -101,7 +101,7 @@ export const ContainerMain = styled.div<ContainerMainProps>`
 export const FirstItem = styled.div`
   width: 100%;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     width: 50%;
     order: 2;
   }
@@ -110,7 +110,7 @@ export const FirstItem = styled.div`
 export const SecondItem = styled.div`
   width: 100%;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     width: 50%;
     order: 1;
   }
@@ -125,7 +125,7 @@ export const ProgressBar = styled.div<ProgressBarProps>`
   top: 0;
   z-index: 20;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     height: 8px;
   }
 `;

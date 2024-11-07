@@ -3,6 +3,7 @@ import { StyledNextButton } from "../styles/button/Button.styled";
 import arrow from "../../assets/arrow-right.png";
 import { ArrowImg } from "../styles/image/Image.styled";
 import { useSurvey } from "../../hooks/useSurvey";
+import { toast } from "react-toastify";
 
 interface Props {
   text: string;
@@ -23,7 +24,21 @@ export const ButtonNextStep = ({
     const route = location.pathname.split("/")[1];
     if (state[route] || route === "step-6") {
       navigate(nextPage);
+      toast.dismiss(route);
+      return;
     }
+    toast("Por favor completa la información", {
+      position: "bottom-left",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+      type: "info",
+      toastId: route,
+    });
   };
   return (
     <StyledNextButton onClick={handleClick}>

@@ -55,7 +55,7 @@ export const StyledParagraph = styled.p<ParagraphProps>`
   color: ${(props) => props.theme.colors.primary};
   text-align: left;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     font-size: ${(props) => (props.$isLastStep ? "30px" : "19px")};
     line-height: ${(props) => (props.$isLastStep ? "39px" : "19px")};
   }

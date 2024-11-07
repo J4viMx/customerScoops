@@ -15,7 +15,7 @@ export const StyledNextButton = styled.button`
   line-height: 13px;
   cursor: pointer;
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     width: 140px;
     display: flex;
     justify-content: center;
@@ -64,8 +64,9 @@ export const StyledOptionLetter = styled.div`
   font-weight: 900;
   margin-left: 5px;
   text-transform: uppercase;
+  font-size: ${(props) => props.theme.text.small};
 
-  @media (min-width: 768px) {
+  @media (min-width: 1024px) {
     width: 30px;
     height: 30px;
   }
