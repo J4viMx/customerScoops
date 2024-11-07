@@ -50,6 +50,7 @@ export const StyledOptionSelector = styled.div<SelectorProps>`
   border-radius: ${(props) => props.theme.borderRadius};
   line-height: 13px;
   cursor: pointer;
+  font-weight: 400;
 `;
 
 export const StyledOptionLetter = styled.div`
@@ -61,10 +62,10 @@ export const StyledOptionLetter = styled.div`
   background-color: ${(props) => props.theme.colors.blue};
   color: white;
   border-radius: ${(props) => props.theme.borderRadius};
-  font-weight: 900;
+  font-weight: 700;
   margin-left: 5px;
   text-transform: uppercase;
-  font-size: ${(props) => props.theme.text.small};
+  font-size: 10px;
 
   @media (min-width: 1024px) {
     width: 30px;

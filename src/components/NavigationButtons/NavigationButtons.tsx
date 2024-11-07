@@ -16,7 +16,7 @@ export const NavigationButtons = ({
   previousPage,
 }: Props) => {
   return (
-    <ContainerButtonPagination>
+    <ContainerButtonPagination $margin={!isFirstORLastPage}>
       {!isFirstORLastPage && <ButtonPreviousStep link={previousPage || ""} />}
       <ButtonNextStep
         text={text}

@@ -49,7 +49,7 @@ const Step2 = () => {
         <ContainerText>
           <LogoDesktop />
           <StyledParagraph>
-            <StyledSpan>Genial {state["01"]}, </StyledSpan>
+            <StyledSpan>Genial {state["step-1"]}, </StyledSpan>
             ahora nos gustaría tener cierta info para diseñar una gran propuesta
             de valor para ti:
           </StyledParagraph>

@@ -12,6 +12,10 @@ interface ProgressBarProps {
   $progress: string;
 }
 
+interface ContainerButtonProps {
+  $margin?: boolean;
+}
+
 export const ContainerBanner = styled.div`
   width: 100%;
   position: relative;
@@ -51,12 +55,15 @@ export const ContainerText = styled.div`
   }
 `;
 
-export const ContainerButtonPagination = styled.div`
+export const ContainerButtonPagination = styled.div<ContainerButtonProps>`
   width: 100%;
   display: flex;
   align-items: flex-start;
   margin-top: 50px;
   gap: 10px;
+  @media (min-width: 1024px) {
+    margin-left: ${(props) => (props.$margin ? "-45px" : "0px")};
+  }
 `;
 
 export const Container = styled.div<ContainerProps>`

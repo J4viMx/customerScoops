@@ -31,6 +31,7 @@ export const StyledTextSubtitle = styled.p`
   line-height: 24px;
   color: ${(props) => props.theme.colors.primary};
   text-align: left;
+  margin-bottom: 5px;
 `;
 
 export const StyledTextTitle = styled(StyledTextSubtitle)`
@@ -45,7 +46,7 @@ export const StyledTextItalic = styled.p`
   color: ${(props) => props.theme.colors.primary};
   text-align: left;
   margin-top: 40px;
-  font-weight: 500;
+  font-weight: 300;
 `;
 
 export const StyledParagraph = styled.p<ParagraphProps>`
