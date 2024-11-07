@@ -1,4 +1,4 @@
-import{d as n,r as c,j as e}from"./index-Bb_VmvaQ.js";import{u as i,C as d,P as u,F as p,B as l,S as x,a as m,L as g,b as h,c as j,d as S,N as b}from"./NavigationButtons-B3g12gLJ.js";const y=n.input`
+import{d as n,r as c,j as e}from"./index-nulQdsSc.js";import{u as i,C as d,P as u,F as p,B as l,S as x,a as m,L as g,b as h,c as j,d as S,N as b}from"./NavigationButtons-CszXky2z.js";const y=n.input`
   width: 100%;
   padding: 8px 0;
   border: none;
