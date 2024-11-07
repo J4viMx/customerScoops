@@ -48,6 +48,8 @@ Por último, se desarrollaron componentes reutilizables para elementos que se re
 - Se agrego un Spinner como componente del suspense que mostrara cuando la pagina este solicitando la siguiente ruta
 - Se decidio agregar etiquetas meta, cambio de fabicon para mejorar el SEO de la pagina
 - Se creo un github action para poder controlar el deploy constante al detectar cambios en la rama main, en este action se realiza un build del proyecto, y creara o actualizara una rama llamada build y al utilizar el webhook que hostinger proporciona pueda consumir el proyecto ya compilado
+- Los datos se guardan en localStorage para poder ser persistentes a pesar de una recarga
+- Se agrego un componente guard para poder redireccionar a las personas que estaban realizando la encuesta, se salieron y regresaron a concluirla
 
 ## Estructura del Proyecto
 La estructura de carpetas del proyecto es la siguiente:

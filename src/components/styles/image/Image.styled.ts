@@ -28,7 +28,6 @@ export const StyledImageLogo = styled.img`
 export const StyledImageBannerDesktop = styled.img`
   width: 100%;
   height: 100vh;
-  /* object-position: center; */
   display: none;
 
   @media (min-width: 1024px) {

@@ -18,15 +18,23 @@ export const ButtonNextStep = ({
 }: Props) => {
   const location = useLocation();
   const navigate = useNavigate();
-  const { state } = useSurvey();
+  const { state, dispatch } = useSurvey();
 
   const handleClick = () => {
     const route = location.pathname.split("/")[1];
-    if (state[route] || route === "step-6") {
+    if (state[route]) {
       navigate(nextPage);
       toast.dismiss(route);
       return;
     }
+    if (route === "step-6") {
+      dispatch({
+        type: "RESET_SURVEY",
+      });
+      window.location.href = "https://www.customerscoops.com/";
+      return;
+    }
+
     toast("Por favor completa la información", {
       position: "bottom-left",
       autoClose: 3000,
