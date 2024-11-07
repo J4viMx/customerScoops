@@ -7,7 +7,6 @@ export interface SurveyState {
   [key: string]: string | number | null;
 }
 
-// Define las acciones del reducer
 export type SurveyAction =
   | {
       type: "SET_RESPONSE";
